@@ -1,0 +1,29 @@
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.pageTitle { font-size: 22px; margin-bottom: 4px; }
+.pageSub   { font-size: 14px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #22C55E;
+}
+.liveDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }

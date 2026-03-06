@@ -1,0 +1,62 @@
+.hero {
+  background: linear-gradient(160deg, var(--maroon-dk) 0%, #4A1A00 100%);
+  padding: 80px 24px 52px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+}
+.heroEmoji {
+  font-size: 96px;
+  flex-shrink: 0;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+.heroContent { max-width: 620px; }
+.heroTitle { color: #FDF6EC; font-size: clamp(22px,3vw,38px); margin-bottom: 8px; }
+.heroLoc   { font-size: 15px; color: rgba(253,246,236,0.55); margin-bottom: 10px; }
+.heroDesc  {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: rgba(253,246,236,0.48);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.heroBadges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.slotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.slotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+}
+.slotCard {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1.5px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.slotCard:hover:not(.slotFull) {
+  border-color: var(--saffron);
+  box-shadow: 0 4px 18px rgba(232,99,26,0.14);
+  transform: translateY(-3px);
+}
+.slotFull    { opacity: 0.48; }
+.slotTime    { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: var(--maroon); margin-bottom: 4px; }
+.slotDate    { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+.slotSeats   { margin-bottom: 8px; }
+.slotPrice   { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 700; color: var(--saffron); margin-bottom: 14px; }
+
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .heroEmoji { display: none; } }

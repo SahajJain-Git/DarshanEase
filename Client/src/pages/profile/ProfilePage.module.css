@@ -1,0 +1,24 @@
+.hero {
+  background: linear-gradient(135deg, var(--maroon-dk) 0%, #4A1A00 100%);
+  border-radius: var(--radius-xl);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+.avatar {
+  width: 76px; height: 76px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  border: 3px solid rgba(255,255,255,0.14);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.3);
+}
+.heroName  { font-family: 'Cinzel', serif; font-size: 21px; font-weight: 700; color: #FDF6EC; margin-bottom: 5px; }
+.heroEmail { font-size: 14px; color: rgba(253,246,236,0.52); }

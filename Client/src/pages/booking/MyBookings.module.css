@@ -1,0 +1,29 @@
+.bCard    { margin-bottom: 18px; overflow: hidden; }
+.bHeader  {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(135deg, rgba(232,99,26,0.04), rgba(212,160,23,0.06));
+  border-bottom: 1px solid var(--border);
+}
+.bTemple { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: var(--maroon); }
+.bId     { font-size: 11px; color: var(--text-muted); margin-top: 3px; letter-spacing: 1px; }
+.bBody   { padding: 18px 20px; }
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.detailLabel { font-size: 11px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.4px; margin-bottom: 4px; }
+.detailVal   { font-size: 14px; font-weight: 600; color: var(--text); }
+
+.bFooter {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(253,246,236,0.4);
+}
+
+@media (max-width: 600px) { .detailGrid { grid-template-columns: 1fr 1fr; } }

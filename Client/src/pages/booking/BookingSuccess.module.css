@@ -1,0 +1,94 @@
+.box { text-align: center; }
+
+.checkIcon {
+  font-size: 68px;
+  margin-bottom: 14px;
+  display: block;
+  animation: bounceIn 0.55s ease;
+}
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 8px;
+}
+.bookingId {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--saffron);
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+.sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+/* Ticket */
+.ticket {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  text-align: left;
+}
+.ticketHeader {
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dk));
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ticketTemple { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: #fff; }
+.ticketId     { font-size: 11px; color: rgba(255,255,255,0.68); margin-top: 3px; letter-spacing: 1px; }
+
+.ticketBody { padding: 16px 22px; }
+.ticketRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(212,160,23,0.08);
+  font-size: 14px;
+}
+.ticketRow:last-child { border-bottom: none; }
+.ticketLbl { color: var(--text-muted); }
+.ticketVal { font-weight: 600; }
+
+.ticketFooter {
+  padding: 14px 22px;
+  background: rgba(253,246,236,0.5);
+  border-top: 1.5px dashed var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.qr {
+  width: 58px; height: 58px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--maroon), var(--saffron));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@keyframes bounceIn {
+  0%   { transform: scale(0.3); opacity: 0; }
+  60%  { transform: scale(1.10); }
+  100% { transform: scale(1);   opacity: 1; }
+}

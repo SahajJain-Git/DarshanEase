@@ -1,0 +1,85 @@
+/* Step indicator */
+.steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.stepItem  { display: flex; align-items: center; }
+.stepNum {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: var(--text-muted);
+  flex-shrink: 0; transition: var(--transition);
+}
+.active { background: var(--saffron);  border-color: var(--saffron); color: #fff; }
+.done   { background: #22C55E;         border-color: #22C55E;        color: #fff; }
+.stepLabel { font-size: 12px; color: var(--text-muted); margin-left: 8px; white-space: nowrap; font-weight: 500; }
+.stepLabelActive { color: var(--saffron); font-weight: 700; }
+.stepLine { flex: 1; height: 2px; background: var(--border); margin: 0 10px; min-width: 24px; transition: var(--transition); }
+.stepLineDone { background: #22C55E; }
+
+/* Summary box */
+.summary {
+  background: linear-gradient(135deg, rgba(232,99,26,0.04), rgba(212,160,23,0.07));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin: 16px 0;
+}
+.summaryTemple { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--maroon); margin-bottom: 10px; }
+.summaryRow    { display: flex; justify-content: space-between; padding: 5px 0; font-size: 14px; }
+.summaryLbl    { color: var(--text-muted); }
+.summaryVal    { font-weight: 500; }
+.summaryTotal  { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 10px; font-weight: 700; font-size: 15px; }
+.summaryPrice  { color: var(--saffron); font-family: 'Cinzel', serif; font-size: 17px; }
+
+/* Donation */
+.donationGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.donationBtn {
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  transition: var(--transition);
+}
+.donationBtn:hover     { border-color: var(--saffron); }
+.donationSelected      { border-color: var(--saffron); background: rgba(232,99,26,0.06); color: var(--saffron); }
+
+/* Payment methods */
+.payMethods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.payMethod {
+  display: flex; align-items: center; gap: 10px;
+  padding: 13px 14px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.payMethod:hover { border-color: var(--saffron); }
+.paySelected     { border-color: var(--saffron); background: rgba(232,99,26,0.05); }
+.payIcon  { font-size: 20px; flex-shrink: 0; }
+.payLabel { font-size: 13px; font-weight: 600; }
+
+/* Spinner inside button */
+.btnSpinner {
+  display: inline-block; width: 15px; height: 15px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px; vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
